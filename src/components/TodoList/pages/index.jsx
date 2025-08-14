@@ -1,7 +1,14 @@
-import Layout from "../Components/pages";
+import { useState } from "react";
+import Layout from "../components/Layout/Layout";
+import Main from "../components/Main/Main";
 
 function Index() {
-	return <Layout>{/* Main컴포넌트가 들어갈 자리 */}</Layout>;
+	const [todoList, setTodoList] = useState([]);
+	return (
+		<Layout>
+			<Main todoList={todoList} setTodoList={setTodoList} />
+		</Layout>
+	);
 }
 
 export default Index;
